@@ -15,16 +15,16 @@ public class BoundaryPrendreEtal {
 
 	public void prendreEtal(String nomVendeur) {
 		if (controlPrendreEtal.verifierIdentite(nomVendeur)) {
-			System.out.println("Bonjour"  + nomVendeur + "je vais regarder " + 
+			System.out.println("Bonjour "  + nomVendeur + "je vais regarder" + 
 					" si je peux vous trouver un étal");	
 			if (controlPrendreEtal.resteEtals()) {
 				installerVendeur(nomVendeur);
 			} else {
-				System.out.println("Désolé" + nomVendeur +
-						"je n'ai plus d'étal non occupé");
+				System.out.println("Désolé " + nomVendeur +
+						" je n'ai plus d'étal non occupé");
 			}
 		} else {
-			System.out.println("Je suis désolé" + nomVendeur + "je vais regarder" + 
+			System.out.println("Je suis désolé " + nomVendeur + " je vais regarder " + 
 					"si je peux vous trouver un étal");
 		}
 	}

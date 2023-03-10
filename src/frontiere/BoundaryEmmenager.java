@@ -66,7 +66,7 @@ public class BoundaryEmmenager {
 		int force = 0;
 		question.append("Bienvenue visiteur,");
 		question.append(nomVisiteur);
-		question.append("Quelle est votre force?\n");
+		question.append(", Quelle est votre force?\n");
 		do {
 			force = Clavier.entrerEntier(question.toString());
 		} while (force < 0);
