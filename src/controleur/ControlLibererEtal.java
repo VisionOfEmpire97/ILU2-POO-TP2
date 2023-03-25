@@ -10,7 +10,6 @@ public class ControlLibererEtal {
 		this.controlTrouverEtalVendeur = controlTrouverEtalVendeur;
 	}
 
-	//TODO a completer
 	public boolean isVendeur(String nomVendeur) {
 		if (controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur) != null) {
 			return true;
@@ -32,6 +31,7 @@ public class ControlLibererEtal {
 		String[] donneesEtal = null;
 		etal = controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
 		donneesEtal = etal.etatEtal();
+		etal.libererEtal();
 		return donneesEtal;
 	}
 

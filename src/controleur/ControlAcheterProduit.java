@@ -20,19 +20,27 @@ public class ControlAcheterProduit {
 	public boolean verifIdentiteAcheteur(String nomAcheteur) {
 		return controlVerifierIdentite.verifierIdentite(nomAcheteur);
 	}
+	
+	public boolean marcheIsEmpty() {
+		return ((village.donnerEtatMarche()).length == 0);
+	}
 
 	
-	public String[] trouverVendeur(String produit) {
+	public Etal[] trouverVendeur(String produit) {
 		Gaulois[] vendeurs = village.rechercherVendeursProduit(produit);
-		String[] etalVendantProduit = null;
+		String[] nomVendeurs = null;
+		Etal[] etalVendantProduit = null;
 		if (vendeurs != null) {
 			for (int i = 0; i < vendeurs.length;i++) {
-				etalVendantProduit[i] = vendeurs[i].getNom();
-//				etalVendantProduit[i] =  
-//						controlTrouverEtalVendeur.trouverEtalVendeur((vendeurs[i].getNom()));
+				nomVendeurs[i] = vendeurs[i].getNom();
+				etalVendantProduit[i] =  controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeurs[i]);
 			}
 		}
 		return etalVendantProduit;
-		//TODO FINISH IT
+	}
+	public int acheterProduit(int qteVoulue) {
+		int qteAchetee = 0;
+		//TODO FINIR DIMPLEMENTER çà
+		return qteAchetee;
 	}
 }
