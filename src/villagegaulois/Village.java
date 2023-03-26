@@ -65,7 +65,7 @@ public class Village {
 	public int donnerNbEtal() {
 		return marche.getNbEtal();
 	}
-
+	
 	/**
 	 * 
 	 * @param vendeur   : un gaulois habitant le village

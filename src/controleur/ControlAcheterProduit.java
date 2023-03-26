@@ -28,8 +28,8 @@ public class ControlAcheterProduit {
 	
 	public Etal[] trouverVendeur(String produit) {
 		Gaulois[] vendeurs = village.rechercherVendeursProduit(produit);
-		String[] nomVendeurs = null;
-		Etal[] etalVendantProduit = null;
+		String[] nomVendeurs = new String[vendeurs.length + 1];
+		Etal[] etalVendantProduit = new Etal[vendeurs.length + 1];
 		if (vendeurs != null) {
 			for (int i = 0; i < vendeurs.length;i++) {
 				nomVendeurs[i] = vendeurs[i].getNom();
@@ -38,9 +38,7 @@ public class ControlAcheterProduit {
 		}
 		return etalVendantProduit;
 	}
-	public int acheterProduit(int qteVoulue) {
-		int qteAchetee = 0;
-		//TODO FINIR DIMPLEMENTER çà
-		return qteAchetee;
+	public int acheterProduit(Etal etalChoisi,int qteVoulue) {
+		return etalChoisi.acheterProduit(qteVoulue);
 	}
 }
