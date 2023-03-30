@@ -26,7 +26,7 @@ public class ControlAcheterProduit {
 	}
 
 	
-	public Etal[] trouverVendeur(String produit) {
+	public Etal[] trouverVendeur(String produit) throws NullPointerException {
 		Gaulois[] vendeurs = village.rechercherVendeursProduit(produit);
 		String[] nomVendeurs = new String[vendeurs.length + 1];
 		Etal[] etalVendantProduit = new Etal[vendeurs.length + 1];

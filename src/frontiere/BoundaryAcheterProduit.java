@@ -31,7 +31,12 @@ public class BoundaryAcheterProduit {
 			do {
 				System.out.println("Quel produit voulez-vous achetez ?");
 				produitCherche = scan.nextLine();
+				try {
 					etalVendantProduit = controlAcheterProduit.trouverVendeur(produitCherche);
+				} catch (NullPointerException e) {
+					System.err.println("Personne ne vend se produit, désolé");
+					e.printStackTrace();
+				}	
 			} while (etalVendantProduit == null) ;
 			System.out.println(afficherOptionsAchat(produitCherche, etalVendantProduit));
 			while (etalChoisi < 0 || etalChoisi >= etalVendantProduit.length) {
