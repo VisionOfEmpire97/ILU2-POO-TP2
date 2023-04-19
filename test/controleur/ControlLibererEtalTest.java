@@ -36,10 +36,13 @@ class ControlLibererEtalTest {
 	
 	@Test
 	void testIsVendeur() {
+		controlTrouverEtalVendeur = new ControlTrouverEtalVendeur(village);
 		ControlVerifierIdentite controlVerifierIdentite = new ControlVerifierIdentite(village);
 		ControlPrendreEtal controlPrendreEtal = new ControlPrendreEtal(controlVerifierIdentite, village);
 		ControlLibererEtal controlLibererEtal = new ControlLibererEtal(controlTrouverEtalVendeur);
 		controlPrendreEtal.prendreEtal("Astérix", "baies", 50);
+		assertTrue(controlLibererEtal.isVendeur("Astérix"));
+		assertFalse(controlLibererEtal.isVendeur("Abraracourcix"));
 	}
 
 }
